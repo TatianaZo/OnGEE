@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class Cube : MonoBehaviour
 {
+    public int CubyID;
    private  int counterNum = 0;
     private Text counter;
     BoxCollider col;
