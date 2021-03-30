@@ -10,6 +10,7 @@ public class Time2 : MonoBehaviour
     private string h, m, s;
     private static Time2 _inst;
     private int GameTime;
+    public GameObject winPanel;
 
     void Awake()
     {
@@ -75,6 +76,11 @@ public class Time2 : MonoBehaviour
         sec++;
 
         _textTime.text = h + ":" + m + ":" + s;
+
+        if (winPanel == true)
+        {
+            Destroy(_textTime);
+        }
     }
     
 }

@@ -10,6 +10,8 @@ public class Manager : MonoBehaviour
     public bool isWin;
 
 
+    
+
     public void win()
     {
         for (int i = 0; i<cube.Length; i++)
@@ -19,14 +21,16 @@ public class Manager : MonoBehaviour
         }
         winPanel.SetActive(true);
         isWin = true;
-            
+
     }
     public void Update()
     {
         if (isWin)
         {
             if (Input.GetKeyDown(KeyCode.Space))
+            {
                 SceneManager.LoadScene(0);
+            }
         }
     }
 }
